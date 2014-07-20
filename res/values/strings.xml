@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">手机防盗</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="main_title1">未开启防盗保护</string>
+    <string name="main_title2">防盗保护已开启</string>
+    <string name="main_content1">开启防盗保护，手机被盗时帮您找回手机</string>
+    <string name="main_content2">您的手机处于防盗保护状态</string>
+    <string name="main_btn1">开启手机防盗</string>
+    <string name="main_btn2">正在保护</string>
+
+    
+</resources>

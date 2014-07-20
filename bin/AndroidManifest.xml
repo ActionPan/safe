@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.example.safe"
+    android:versionCode="1"
+    android:versionName="1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    
+    
+     <!-- 访问网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 定位权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> 
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/noti_icon"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
+        
+        
+        <activity android:name="com.example.safe.LoginActivity" android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity><activity android:name="RegisterActivity"></activity>
+        <activity android:name="SecurityActivity" android:launchMode="singleInstance"></activity>
+        <activity android:name="ForgetActivity" android:launchMode="singleInstance"></activity>
+        <activity android:name="SettingsActivity" android:launchMode="singleInstance"></activity>
+        <activity android:name="ChangeActivity" android:launchMode="singleInstance"></activity>
+        <activity android:name="TrackActivity" android:launchMode="singleInstance"></activity>
+        <activity android:name="DeleteActivity" android:launchMode="singleInstance"></activity>
+        <activity android:name="LockActivity" android:launchMode="singleInstance"></activity>
+        <activity android:name="LocationActivity" android:launchMode="singleInstance"></activity>
+        <activity android:name="SuoPingActivity" android:launchMode="singleInstance"></activity>
+        <activity android:name="LocationMap" android:launchMode="singleInstance"></activity>
+        
+        <receiver android:name="SMS_BroadcastReceiver" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="LockReceiver"
+            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/lock_screen" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+        
+        <activity android:name="Remote_suoping" >
+            <intent-filter>
+                <action android:name="com.suoping" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="FxService" >
+            <intent-filter>
+                <action android:name="com.suoping2" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

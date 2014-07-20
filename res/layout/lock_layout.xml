@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e7e7e7"
+    android:orientation="vertical" >
+    
+	<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+		android:background="@drawable/lantiao_3">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textSize="25dp"
+            android:textColor="#ffffff"
+            android:layout_centerInParent="true"
+            android:text="锁定手机" />
+
+        <ImageButton
+            android:id="@+id/lock_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/setting" />
+
+        <ImageButton
+            android:id="@+id/lock_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back" />
+
+    </RelativeLayout>
+    
+	<TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="20dp"
+        android:text="被盗手机当前使用的号码:" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/corners_circle" >
+
+        <EditText
+            android:id="@+id/phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            android:ems="10"
+            android:inputType="textPersonName" >
+
+            <requestFocus />
+        </EditText>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="20dp"
+        android:text="被盗手机的防盗密码:" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/corners_circle" >
+
+        <EditText
+            android:id="@+id/phone_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            android:ems="10"
+            android:inputType="textPersonName" >
+
+        </EditText>
+
+    </LinearLayout>
+
+    
+
+        <Button
+            android:id="@+id/lock"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/enter_btn"
+            android:textSize="25dp"
+            android:textColor="#1c7500"
+            android:text="锁定手机" />
+        
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#d4d4d4" >
+        
+         <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:layout_marginLeft="5dp"
+            android:text="用任意手机发送短信指令" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#1c7500"
+            android:background="#e3bd42"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:layout_marginRight="5dp"
+            android:text="suoding*防盗密码" />
+
+    </LinearLayout>
+
+         <TextView
+             android:id="@+id/textView6"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textSize="15dp"
+             android:layout_marginLeft="5dp"
+             android:layout_marginRight="5dp"
+             android:text="到被盗手机，将锁定手机屏幕，防止别人操作。" />
+
+         <TextView
+             android:id="@+id/textView7"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="10dp"
+             android:textColor="#1c7500"
+             android:layout_marginBottom="20dp"
+             android:textSize="15dp"
+             android:layout_marginLeft="5dp"
+             android:layout_marginRight="5dp"
+             android:text="备注：锁定成功后需要用防盗密码解锁，请妥善保存好防盗密码。" />
+        
+    </LinearLayout>
+    
+</LinearLayout>
